@@ -23,11 +23,14 @@ export const PatientsContext = createContext({} as NewPatientsContextType);
 export function PatientsProvider({ children }: PatientProviderProps) {
   const [reservations, setReservations] = useState<ReservationProps[]>([]);
   async function fetchReservations(query?: string) {
-    const response = await api.get('/reservations?_sort=createdAt&_order=asc', {
-      params: {
-        q: query,
+    const response = await api.get(
+      '/reservations?_sort=createdAt&_order=desc',
+      {
+        params: {
+          q: query,
+        },
       },
-    });
+    );
     setReservations(response.data);
   }
 
