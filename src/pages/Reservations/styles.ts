@@ -15,7 +15,7 @@ export const ReservationsTable = styled.table`
   border-collapse: separate;
   border-spacing: 0 0.5rem;
 
-  @media (min-width: 750px) {
+  @media (min-width: 870px) {
     display: inline-table;
   }
 
