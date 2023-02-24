@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
@@ -21,7 +20,7 @@ export const HeaderContent = styled.div`
   }
 `;
 
-export const ReservationsLink = styled(Link)`
+export const ReservationsLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
