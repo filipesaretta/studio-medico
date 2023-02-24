@@ -1,11 +1,16 @@
+import { useContext } from 'react';
 import { Header } from '../../components/Header';
+import { SearchForm } from '../../components/SerchForm';
+import { PatientsContext } from '../../context/PatientsContext';
 import { ReservationsContainer, ReservationsTable } from './styles';
 
 export function Reservations() {
+  const { reservations } = useContext(PatientsContext);
   return (
     <>
       <Header />
       <ReservationsContainer>
+        <SearchForm />
         <ReservationsTable>
           <thead>
             <tr>
@@ -17,13 +22,17 @@ export function Reservations() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1adew12523qq</td>
-              <td>Jonh Doe </td>
-              <td>ABCDE94B13Z602B</td>
-              <td>Ativa</td>
-              <td>23/02/2023</td>
-            </tr>
+            {reservations.map(
+              ({ id, name, codiceFiscale, createdAt, prenotazioneAttiva }) => (
+                <tr key={id}>
+                  <td>{id}</td>
+                  <td>{name}</td>
+                  <td>{codiceFiscale}</td>
+                  <td>{prenotazioneAttiva ? 'Attiva' : 'No'}</td>
+                  <td>{createdAt}</td>
+                </tr>
+              ),
+            )}
           </tbody>
         </ReservationsTable>
       </ReservationsContainer>
