@@ -23,6 +23,8 @@ export const HeaderContent = styled.div`
 export const ReservationsLink = styled.a`
   text-decoration: none;
   display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
   height: 3.125rem;
   border: 0;
@@ -30,11 +32,17 @@ export const ReservationsLink = styled.a`
   color: ${(props) => props.theme.white};
   border-radius: 8px;
   transition: background-color 300ms;
-
+  text-align: center;
   font-weight: bold;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
 
   &:hover {
     background-color: ${(props) => props.theme.green};
+  }
+
+  font-size: 0.875rem;
+  @media (min-width: 850px) {
+    padding: 0 1.25rem;
+    font-size: 1rem;
   }
 `;
