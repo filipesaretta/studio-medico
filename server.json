@@ -1,11 +1,32 @@
 {
-  "reservation": [
+  "reservations": [
     {
-      "id": 1,
-      "codiceFiscale": "SRTFLP94S13Z602B",
-      "prenotazioneAttiva": false,
-      "createdAt": "2023-02-23"
+      "id": "c9d52fc2-965e-42eb-a791-b7a8dec76506",
+      "createdAt": "3/3/2023",
+      "codiceFiscale": "SRTZZP94Z13X602X",
+      "name": "Jonh",
+      "prenotazioneAttiva": true
+    },
+    {
+      "id": "c5db2641-7f05-46b9-994c-f79fed0e4170",
+      "createdAt": "28/4/2023",
+      "codiceFiscale": "SRTPPX94Z13P602P",
+      "name": "Joane",
+      "prenotazioneAttiva": true
+    },
+    {
+      "id": "075bdf9e-afb9-4f5b-85b8-738317340f5a",
+      "createdAt": "21/4/2023",
+      "codiceFiscale": "STDZZP74Z13X602X",
+      "name": "Fra",
+      "prenotazioneAttiva": true
+    },
+    {
+      "id": "b222f680-b0bd-46fa-9d6c-58ed23bbed7e",
+      "createdAt": "30/3/2023",
+      "codiceFiscale": "SRTZZP94Z13X602P",
+      "name": "Pam",
+      "prenotazioneAttiva": true
     }
   ]
-
 }
