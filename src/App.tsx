@@ -1,19 +1,20 @@
 import { ThemeProvider } from 'styled-components';
-import { BookCalendar } from './components/BookCalendar';
 import { defaultTheme } from './styles/themes/default';
 import { GlobalStyle } from './styles/globals';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './Router';
+import { PatientsProvider } from './context/PatientsContext';
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
-        <Router />
-        {/* <BookCalendar/> */}
-      </BrowserRouter>
-      <GlobalStyle />
-    </ThemeProvider>
+    <PatientsProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+        <GlobalStyle />
+      </ThemeProvider>
+    </PatientsProvider>
   );
 }
 
